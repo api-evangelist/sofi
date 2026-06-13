@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.sofi.com/",
+  "name": "SoFi",
+  "alternateName": "Social Finance",
+  "url": "https://www.sofi.com/",
+  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "description": "SoFi (Social Finance) is a digital personal finance company and federally chartered bank offering an integrated suite of financial products including banking, personal loans, student loan refinancing, mortgages, investing, cryptocurrency trading, and credit cards.",
+  "sameAs": [
+    "https://twitter.com/SoFi",
+    "https://www.linkedin.com/company/sofi",
+    "https://github.com/SoFiInc"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://support.sofi.com/hc/en-us",
+    "contactType": "customer support"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SoFi Financial Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "SoFi Money Banking",
+        "description": "Combined checking and savings account with high-yield APY up to 4.50% for SoFi Plus members, no-fee banking, and early paycheck access.",
+        "url": "https://www.sofi.com/banking/"
+      },
+      {
+        "@type": "Offer",
+        "name": "SoFi Personal Loans",
+        "description": "Fixed-rate personal loans starting at 6.99% APR for qualified borrowers, loans from $5,000.",
+        "url": "https://www.sofi.com/personal-loans/"
+      },
+      {
+        "@type": "Offer",
+        "name": "SoFi Student Loan Refinancing",
+        "description": "Student loan refinancing with fixed rates from 3.99% APR with autopay and private student loans with no origination fees.",
+        "url": "https://www.sofi.com/refinance-student-loan/"
+      },
+      {
+        "@type": "Offer",
+        "name": "SoFi Mortgage",
+        "description": "Home purchase loans, refinancing, HELOC, and home equity loans with SoFi Plus member discounts.",
+        "url": "https://www.sofi.com/mortgage/"
+      },
+      {
+        "@type": "Offer",
+        "name": "SoFi Invest",
+        "description": "Active and automated investing in stocks, ETFs, fractional shares, IPOs, and cryptocurrency with IRA options.",
+        "url": "https://www.sofi.com/invest/"
+      },
+      {
+        "@type": "Offer",
+        "name": "SoFi Credit Card",
+        "description": "Cash back rewards credit card with Smart Card offering 5% cash back at grocery stores and 10% boost for SoFi Plus members.",
+        "url": "https://www.sofi.com/credit-card/"
+      }
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "url": "https://www.sofi.com/",
+    "name": "SoFi - Digital Personal Finance"
+  },
+  "subOrganization": {
+    "@type": "Organization",
+    "name": "Galileo Financial Technologies",
+    "description": "SoFi subsidiary providing fintech infrastructure and white-label banking APIs used by major fintech brands globally."
+  }
+}
