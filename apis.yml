@@ -1,0 +1,211 @@
+aid: sofi
+url: https://raw.githubusercontent.com/api-evangelist/sofi/refs/heads/main/apis.yml
+apis:
+
+  - aid: sofi:sofi-money-banking-api
+    name: SoFi Money Banking API
+    tags:
+      - Banking
+      - Checking
+      - Savings
+      - Open Banking
+      - Personal Finance
+    humanURL: https://www.sofi.com/banking/
+    properties:
+      - url: https://www.sofi.com/banking/
+        type: Documentation
+      - url: https://www.sofi.com/terms-of-use
+        type: TermsOfService
+      - url: https://www.sofi.com/privacy-policy
+        type: PrivacyPolicy
+    description: >-
+      SoFi Money is a combined checking and savings account offering high-yield savings with SoFi Plus
+      membership (4.50% APY on up to $20,000), no-fee banking, early paycheck access, and integrations
+      with open banking aggregators Plaid and Finicity for third-party account connectivity, balance
+      checks, transaction history, and account ownership verification.
+
+  - aid: sofi:sofi-personal-loans-api
+    name: SoFi Personal Loans API
+    tags:
+      - Personal Loans
+      - Lending
+      - Consumer Finance
+      - Personal Finance
+    humanURL: https://www.sofi.com/personal-loans/
+    properties:
+      - url: https://www.sofi.com/personal-loans/
+        type: Documentation
+      - url: https://www.sofi.com/personal-loans/personal-loan-rates/
+        type: Documentation
+      - url: https://www.sofi.com/personal-loan-calculator/
+        type: Documentation
+    description: >-
+      SoFi Personal Loans platform providing fixed-rate personal loans starting at 6.99% APR for
+      qualified borrowers. Loans from $5,000 with origination fees of 0-7% deducted from loan proceeds.
+      SoFi Plus members receive an additional 0.25% rate reduction. Consumer-facing loan application
+      and account management accessible via the SoFi app and web platform.
+
+  - aid: sofi:sofi-student-loan-refinancing-api
+    name: SoFi Student Loan Refinancing API
+    tags:
+      - Student Loans
+      - Refinancing
+      - Education Finance
+      - Personal Finance
+    humanURL: https://www.sofi.com/refinance-student-loan/
+    properties:
+      - url: https://www.sofi.com/refinance-student-loan/
+        type: Documentation
+      - url: https://www.sofi.com/private-student-loans/
+        type: Documentation
+    description: >-
+      SoFi Student Loan Refinancing and Private Student Loan origination platform. Refinancing fixed
+      rates start at 3.99% APR with autopay (0.25% autopay discount). Private student loans feature
+      no origination fees, no late fees, and no insufficient funds fees. SoFi Plus members receive
+      an additional 0.125% rate reduction on refinancing and private student loans.
+
+  - aid: sofi:sofi-mortgage-api
+    name: SoFi Mortgage API
+    tags:
+      - Mortgage
+      - Home Loans
+      - Real Estate
+      - Lending
+      - Personal Finance
+    humanURL: https://www.sofi.com/mortgage/
+    properties:
+      - url: https://www.sofi.com/mortgage/
+        type: Documentation
+      - url: https://www.sofi.com/heloc/
+        type: Documentation
+    description: >-
+      SoFi Mortgage platform for home purchase loans and refinancing, plus Home Equity Lines of Credit
+      (HELOC) and home equity loans. SoFi Plus members receive a $500 additional mortgage origination
+      fee discount and a $200 home equity loan discount at closing. Consumer-facing applications
+      managed through the SoFi app and web platform.
+
+  - aid: sofi:sofi-invest-api
+    name: SoFi Invest API
+    tags:
+      - Investing
+      - Stocks
+      - ETFs
+      - Crypto
+      - Retirement
+      - Personal Finance
+    humanURL: https://www.sofi.com/invest/
+    properties:
+      - url: https://www.sofi.com/invest/
+        type: Documentation
+      - url: https://www.sofi.com/wealth/assets/documents/sofi-invest-fee-schedule.pdf
+        type: Documentation
+      - url: https://www.sofi.com/invest/ira/
+        type: Documentation
+    description: >-
+      SoFi Invest provides active and automated investing in stocks, ETFs, fractional shares, IPOs,
+      and cryptocurrency. SoFi Plus members receive a 1% match on eligible Active Invest deposits,
+      1% match on eligible crypto purchases (up to $250,000 lifetime), and IPO allocation priority.
+      Includes automated retirement accounts (IRA) and robo-advisor functionality.
+
+  - aid: sofi:sofi-credit-card-api
+    name: SoFi Credit Card API
+    tags:
+      - Credit Card
+      - Payments
+      - Rewards
+      - Personal Finance
+    humanURL: https://www.sofi.com/credit-card/
+    properties:
+      - url: https://www.sofi.com/credit-card/
+        type: Documentation
+    description: >-
+      SoFi Credit Card platform with cash back rewards and the new SoFi Smart Card offering 5% cash
+      back at grocery stores. SoFi Plus members receive a 10% boost on cash back rewards and 5% cash
+      back on SoFi Travel bookings via the Expedia-powered travel portal. Consumer-facing account
+      management and rewards redemption through the SoFi app.
+
+name: SoFi
+tags:
+  - Personal Finance
+  - Banking
+  - Lending
+  - Student Loans
+  - Mortgages
+  - Investing
+  - Credit Cards
+  - Fintech
+  - Open Banking
+  - Digital Banking
+kind: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+common:
+  - type: Website
+    url: https://www.sofi.com/
+  - type: Documentation
+    url: https://www.sofi.com/blog/
+  - type: GitHubOrganization
+    url: https://github.com/SoFiInc
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sofi
+  - type: Blog
+    url: https://www.sofi.com/blog/
+  - type: Pricing
+    url: https://www.sofi.com/sofi-plus/
+  - type: StatusPage
+    url: https://sofi.statuspage.io
+  - type: X
+    url: https://twitter.com/SoFi
+  - type: Plans
+    url: plans/sofi-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sofi-rate-limits.yml
+  - type: FinOps
+    url: finops/sofi-finops.yml
+  - type: TermsOfService
+    url: https://www.sofi.com/terms-of-use
+  - type: PrivacyPolicy
+    url: https://www.sofi.com/privacy-policy
+  - type: Support
+    url: https://support.sofi.com/hc/en-us
+  - type: Features
+    data:
+      - Digital personal finance platform covering banking, lending, investing, and insurance
+      - SoFi Money combined checking and savings with high-yield APY (4.50% for Plus members)
+      - Personal loans from $5,000 at fixed rates starting at 6.99% APR
+      - Student loan refinancing with fixed rates from 3.99% APR with autopay
+      - Private student loans with no origination, late, or NSF fees
+      - Mortgage, home equity loan, and HELOC products
+      - SoFi Invest for stocks, ETFs, fractional shares, crypto, IPOs, and automated investing
+      - SoFi Credit Card with cash back rewards and Smart Card with 5% grocery cash back
+      - SoFi Plus premium membership at $10/month with enhanced rates and rewards
+      - Open banking connectivity via Plaid and Finicity (Mastercard) aggregators
+      - SoFi Relay credit score monitoring and financial tracking dashboard
+      - Galileo Financial Technologies subsidiary powering white-label fintech infrastructure APIs
+      - 100% uptime across Bot, Site, Payment, and Backend services (90-day tracked)
+      - SoFi Coach AI-powered financial planning tool
+      - Unlimited financial planner appointments for SoFi Plus members
+    sources:
+      - https://www.sofi.com/
+      - https://www.sofi.com/sofi-plus/
+      - https://www.openbankingtracker.com/provider/sofi
+      - https://sofi.statuspage.io
+    updated: '2026-06-13'
+created: '2026-06-13'
+modified: '2026-06-13'
+position: Consuming
+description: >-
+  SoFi (Social Finance) is a digital personal finance company and federally chartered bank offering
+  an integrated suite of financial products including banking (checking and savings), personal loans,
+  student loan refinancing, private student loans, mortgages, home equity products, active and
+  automated investing, cryptocurrency trading, and credit cards. The platform is unified through the
+  SoFi app and complemented by a SoFi Plus premium membership ($10/month) that unlocks enhanced APY,
+  investment matching, loan rate discounts, and unlimited financial planner access. Third-party
+  integration with SoFi accounts is facilitated through open banking aggregators Plaid and Finicity
+  (Mastercard Open Banking) for consumer-permissioned data access. SoFi's subsidiary Galileo Financial
+  Technologies provides the underlying fintech infrastructure and white-label banking APIs used by
+  major fintech brands globally.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+specificationVersion: '0.19'

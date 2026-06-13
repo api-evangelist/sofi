@@ -1,0 +1,73 @@
+name: SoFi FinOps
+description: Financial operations considerations for integrating with or consuming SoFi products and services, including cost optimization strategies, fee structures, and partnership economics.
+url: https://www.sofi.com/
+costs:
+
+  - name: SoFi Plus Membership
+    description: Monthly subscription fee for SoFi Plus premium tier. Required from March 31, 2026 onward for full premium benefits. Free tier remains available without subscription.
+    type: subscription
+    amount: 10.00
+    unit: month
+    url: https://www.sofi.com/sofi-plus/
+
+  - name: Personal Loan Origination Fee
+    description: Origination fee deducted from loan proceeds on SoFi Bank-originated personal loans.
+    type: transaction
+    amount_min: 0.0
+    amount_max: 7.0
+    unit: percent_of_loan
+    url: https://www.sofi.com/personal-loans/
+
+  - name: Student Loan Refinancing
+    description: No origination fees on student loan refinancing products. Rate discount available with autopay enrollment.
+    type: loan
+    origination_fee: 0.00
+    autopay_discount_percent: 0.25
+    url: https://www.sofi.com/refinance-student-loan/
+
+  - name: Private Student Loans
+    description: No origination fees, no late fees, and no insufficient funds fees on SoFi private student loans.
+    type: loan
+    origination_fee: 0.00
+    late_fee: 0.00
+    nsf_fee: 0.00
+    url: https://www.sofi.com/private-student-loans/
+
+  - name: Investing Fee Schedule
+    description: SoFi Invest active investing and automated investing products. Fee schedule published in official PDF documentation.
+    type: investment
+    url: https://www.sofi.com/wealth/assets/documents/sofi-invest-fee-schedule.pdf
+
+savings:
+
+  - name: SoFi Plus Loan Discounts
+    description: SoFi Plus members receive additional rate and fee reductions across lending products that can offset the $10/month membership cost.
+    benefits:
+      - mortgage_origination_discount: $500
+      - home_equity_loan_discount: $200
+      - student_loan_refinance_rate_reduction: 0.125%
+      - personal_loan_rate_reduction: 0.25%
+      - private_student_loan_rate_reduction: 0.125%
+
+  - name: SoFi Plus Savings APY
+    description: Enhanced APY on SoFi Savings accounts for Plus members, generating incremental interest income relative to standard rates.
+    apy_plus: 4.50%
+    apy_plus_cap: $20,000
+    apy_plus_above_cap: 3.10%
+
+partnerships:
+
+  - name: Galileo Financial Technologies
+    description: SoFi subsidiary providing white-label fintech infrastructure APIs for banking, card issuing, and payments. Enterprise agreements required for integration.
+    url: https://www.galileo-ft.com/
+    type: subsidiary
+
+  - name: Plaid
+    description: Open banking aggregator providing third-party access to SoFi account data for consumer-permissioned integrations.
+    url: https://plaid.com/
+    type: aggregator
+
+  - name: Finicity (Mastercard Open Banking)
+    description: Open banking aggregator supporting SoFi account connectivity for transaction data, balance verification, and account ownership confirmation.
+    url: https://developer.mastercard.com/product/open-banking
+    type: aggregator

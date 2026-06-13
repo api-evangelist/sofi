@@ -1,0 +1,45 @@
+name: SoFi Plans and Pricing
+description: SoFi offers a free tier with core banking, lending, and investing products, plus a premium SoFi Plus membership at $10/month that unlocks enhanced rates, rewards, and financial planning services.
+url: https://www.sofi.com/sofi-plus/
+plans:
+
+  - name: SoFi Free
+    description: Access to core SoFi financial products including banking, personal loans, student loan refinancing, investing, and credit cards at standard rates with no monthly fee.
+    url: https://www.sofi.com/
+    price: 0.00
+    unit: month
+    features:
+      - SoFi Money checking and savings accounts
+      - Personal loans starting at 6.99% APR
+      - Student loan refinancing starting at 3.99% APR fixed with autopay
+      - Private student loans with no origination, late, or NSF fees
+      - Mortgage and home equity loan products
+      - SoFi Invest active and automated investing
+      - SoFi Credit Card with cash back rewards
+      - Crypto trading
+      - SoFi Relay credit monitoring and financial tracking
+
+  - name: SoFi Plus
+    description: Premium membership tier with enhanced APY on savings, investment matching, loan rate discounts, unlimited financial planner access, and exclusive lifestyle perks.
+    url: https://www.sofi.com/sofi-plus/
+    price: 10.00
+    unit: month
+    features:
+      - 4.50% APY on up to $20,000 in SoFi Savings (3.10% on additional balances)
+      - 1% match on eligible Active Invest deposits
+      - 1% match on eligible crypto purchases (up to $250,000 lifetime cap)
+      - IPO allocation priority
+      - 2x rewards points on qualifying activities
+      - 10% boost on SoFi Credit Card cash back rewards
+      - 5% cash back on SoFi Travel bookings (excluding airfare)
+      - $500 additional mortgage origination fee discount
+      - $200 additional home equity loan discount
+      - 0.125% student loan refinance rate reduction
+      - 0.25% personal loan rate reduction
+      - 0.125% private student loan rate reduction
+      - Unlimited financial planner appointments (valued at $300/session)
+      - Exclusive SoFi Stadium perks and member experiences
+      - 40% CNBC+ subscription discount
+      - 50% HelloPrivacy data monitoring discount
+      - Discounts at TurboTax, Care.com, Rakuten, Vivid Seats, and Seated
+      - SoFi Travel savings portal powered by Expedia

@@ -1,0 +1,30 @@
+name: SoFi Rate Limits
+description: SoFi does not publish a public developer API with documented rate limits. Access to SoFi account data for third-party integrations is facilitated through open banking aggregators such as Plaid and Finicity (Mastercard), which apply their own rate limiting policies. The SoFi platform itself has application-level service controls monitored via the SoFi status page.
+url: https://sofi.statuspage.io
+limits:
+
+  - name: Open Banking Aggregator Access
+    description: SoFi account data (balances, transactions, account ownership) is accessible via Plaid and Finicity aggregator integrations. Rate limits are governed by each aggregator's terms and policies, not directly by SoFi.
+    type: third-party
+    notes: Contact Plaid (plaid.com) or Finicity (developer.mastercard.com/product/open-banking) for specific rate limit documentation.
+
+  - name: SoFi Application Services
+    description: SoFi monitors Bot, Site, Payment, and Backend service tiers via their public status page. No publicly documented per-client rate limits exist for consumer-facing services.
+    type: internal
+    services:
+      - name: Bot
+        uptime_90_days: 100.0%
+      - name: Site
+        uptime_90_days: 100.0%
+      - name: Payment
+        uptime_90_days: 100.0%
+      - name: Backend
+        uptime_90_days: 100.0%
+    status_page: https://sofi.statuspage.io
+
+notes: >
+  SoFi does not operate a public-facing developer API with published rate limit tiers.
+  The Galileo Financial Technologies platform (a SoFi subsidiary) provides fintech
+  banking infrastructure APIs (Program API, Card API, Payment Hub API, Loan API, etc.)
+  with separate access, documentation, and rate limit policies available through Galileo
+  enterprise agreements at galileo-ft.com.
