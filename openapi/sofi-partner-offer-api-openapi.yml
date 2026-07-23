@@ -1,0 +1,89 @@
+openapi: 3.0.3
+info:
+  title: SoFi Partner Offer Pre-Qualification API
+  version: '2.0'
+  description: >-
+    SoFi's partner-offer-api (Partner Offer Pre Qual V2) is an external REST API that exposes
+    SoFi's underwriting model to approved partners, returning real-time Personal Loan (PL) and
+    Student Loan Refinancing (SLR) offers based on user-entered criteria. User-entered criteria
+    can also be saved to pre-populate data on a SoFi loan application when an offer is selected on
+    a partner site. Later releases added specialty SLR handling for Medical and Dental graduate
+    programs. Authentication is by API key / UUID (one per product type, PL or SLR) supplied as the
+    accountId parameter in the JSON request body; a password is not required and all requests must
+    be made over HTTPS. This document was harvested faithfully from SoFi's public Postman workspace
+    (team-sofi / sofi-api) and captures only the endpoint, method, base URLs, auth model, and
+    documented response codes that SoFi publishes there.
+  contact:
+    name: SoFi (Social Finance, Inc.)
+    url: https://www.sofi.com/
+servers:
+  - url: https://www.sofi.com
+    description: Production
+  - url: https://dev-external-0.sofitest.com
+    description: Development / testing (does not affect live data)
+security:
+  - accountIdKey: []
+paths:
+  /po/api/v2/loan-offer/json:
+    post:
+      operationId: getLoanOffer
+      summary: Return real-time loan offers
+      description: >-
+        Returns real-time Personal Loan (PL) and Student Loan Refinancing (SLR) offers by running
+        user-entered criteria through SoFi's underwriting model. The partner's API key / UUID is
+        passed as the accountId field in the request body.
+      tags:
+        - Partner Offers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoanOfferRequest'
+      responses:
+        '200':
+          description: Okay - Everything worked as expected; loan offers returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoanOfferResponse'
+        '400':
+          description: Bad Request - The request failed, likely due to a missing required parameter
+        '401':
+          description: Unauthorized - The API key / UUID provided was not valid
+        '404':
+          description: Not Found - The requested resource does not exist
+components:
+  securitySchemes:
+    accountIdKey:
+      type: apiKey
+      in: header
+      name: accountId
+      description: >-
+        SoFi documents the API key / UUID as the accountId supplied in the JSON request body
+        (one unique UUID per product type, PL or SLR). Modeled here as an apiKey scheme; consult
+        SoFi's partner documentation for exact placement.
+  schemas:
+    LoanOfferRequest:
+      type: object
+      required:
+        - accountId
+        - loanPurpose
+      properties:
+        accountId:
+          type: string
+          format: uuid
+          description: Partner API key / UUID issued by SoFi, per product type (PL or SLR).
+        loanPurpose:
+          type: integer
+          description: 'Product selector, e.g. 2 = Student Loan Refinance.'
+        graduateProgram:
+          type: integer
+          description: >-
+            Specialty SLR graduate program code (added 2021-11-11): 3 = MEDICINE_MD,
+            13 = MEDICINE_DO, 14 = DENTAL.
+      additionalProperties: true
+    LoanOfferResponse:
+      type: object
+      description: Real-time loan offers returned by SoFi's underwriting model.
+      additionalProperties: true

@@ -2,127 +2,119 @@ aid: sofi
 url: https://raw.githubusercontent.com/api-evangelist/sofi/refs/heads/main/apis.yml
 apis:
 
-  - aid: sofi:sofi-money-banking-api
-    name: SoFi Money Banking API
+  - aid: sofi:sofi-partner-offer-api
+    name: SoFi Partner Offer Pre-Qualification API
     tags:
-      - Banking
-      - Checking
-      - Savings
-      - Open Banking
-      - Personal Finance
-    humanURL: https://www.sofi.com/banking/
-    properties:
-      - url: https://www.sofi.com/banking/
-        type: Documentation
-      - url: https://www.sofi.com/terms-of-use
-        type: TermsOfService
-      - url: https://www.sofi.com/privacy-policy
-        type: PrivacyPolicy
-    description: >-
-      SoFi Money is a combined checking and savings account offering high-yield savings with SoFi Plus
-      membership (4.50% APY on up to $20,000), no-fee banking, early paycheck access, and integrations
-      with open banking aggregators Plaid and Finicity for third-party account connectivity, balance
-      checks, transaction history, and account ownership verification.
-
-  - aid: sofi:sofi-personal-loans-api
-    name: SoFi Personal Loans API
-    tags:
-      - Personal Loans
       - Lending
-      - Consumer Finance
-      - Personal Finance
-    humanURL: https://www.sofi.com/personal-loans/
+      - Personal Loans
+      - Student Loan Refinancing
+      - Prequalification
+      - Partner API
+      - United States
+    humanURL: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/documentation/7686555-548d8800-0df1-4783-8450-aade8b8a39e4
+    baseURL: https://www.sofi.com
     properties:
-      - url: https://www.sofi.com/personal-loans/
+      - url: openapi/sofi-partner-offer-api-openapi.yml
+        type: OpenAPI
+      - url: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/documentation/7686555-548d8800-0df1-4783-8450-aade8b8a39e4
         type: Documentation
-      - url: https://www.sofi.com/personal-loans/personal-loan-rates/
-        type: Documentation
-      - url: https://www.sofi.com/personal-loan-calculator/
-        type: Documentation
+      - url: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/collection/orw4s7j/affiliate-prequal-offers
+        type: Postman
     description: >-
-      SoFi Personal Loans platform providing fixed-rate personal loans starting at 6.99% APR for
-      qualified borrowers. Loans from $5,000 with origination fees of 0-7% deducted from loan proceeds.
-      SoFi Plus members receive an additional 0.25% rate reduction. Consumer-facing loan application
-      and account management accessible via the SoFi app and web platform.
+      SoFi's partner-offer-api (documented as Partner Offer Pre Qual V2) is a real, first-party external
+      REST API that exposes SoFi's underwriting model to approved partners, returning real-time Personal
+      Loan (PL) and Student Loan Refinancing (SLR) offers based on user-entered criteria via a single
+      POST /po/api/v2/loan-offer/json endpoint. User-entered criteria can be saved to pre-populate a
+      SoFi loan application when an offer is selected on the partner's site, and a 2021 release added
+      specialty SLR handling for Medical and Dental graduate programs. Authentication is by API key /
+      UUID (one per product type, PL or SLR) passed as the accountId in the JSON body, over HTTPS only;
+      testing uses base URL https://dev-external-0.sofitest.com and production uses https://www.sofi.com.
+      Endpoint, method, base URLs, auth model, and response codes were harvested faithfully from SoFi's
+      public Postman workspace (team-sofi / sofi-api).
 
-  - aid: sofi:sofi-student-loan-refinancing-api
-    name: SoFi Student Loan Refinancing API
-    tags:
-      - Student Loans
-      - Refinancing
-      - Education Finance
-      - Personal Finance
-    humanURL: https://www.sofi.com/refinance-student-loan/
-    properties:
-      - url: https://www.sofi.com/refinance-student-loan/
-        type: Documentation
-      - url: https://www.sofi.com/private-student-loans/
-        type: Documentation
-    description: >-
-      SoFi Student Loan Refinancing and Private Student Loan origination platform. Refinancing fixed
-      rates start at 3.99% APR with autopay (0.25% autopay discount). Private student loans feature
-      no origination fees, no late fees, and no insufficient funds fees. SoFi Plus members receive
-      an additional 0.125% rate reduction on refinancing and private student loans.
-
-  - aid: sofi:sofi-mortgage-api
-    name: SoFi Mortgage API
+  - aid: sofi:sofi-home-loan-affiliate-lead-api
+    name: SoFi Home Loan Affiliate Lead API
     tags:
       - Mortgage
       - Home Loans
-      - Real Estate
-      - Lending
-      - Personal Finance
-    humanURL: https://www.sofi.com/mortgage/
+      - Affiliate
+      - Lead Generation
+      - Partner API
+      - United States
+    humanURL: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/documentation/11106810-0d3f9390-b6f2-4100-891d-977691e36fc2
+    baseURL: https://www.sofi.com
     properties:
-      - url: https://www.sofi.com/mortgage/
+      - url: openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+        type: OpenAPI
+      - url: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/documentation/11106810-0d3f9390-b6f2-4100-891d-977691e36fc2
         type: Documentation
-      - url: https://www.sofi.com/heloc/
-        type: Documentation
+      - url: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/documentation/5k2lj48/home-loan-affiliate-lead-api
+        type: Postman
     description: >-
-      SoFi Mortgage platform for home purchase loans and refinancing, plus Home Equity Lines of Credit
-      (HELOC) and home equity loans. SoFi Plus members receive a $500 additional mortgage origination
-      fee discount and a $200 home equity loan discount at closing. Consumer-facing applications
-      managed through the SoFi app and web platform.
+      SoFi's Home Loan Affiliate Lead API is a real, first-party REST endpoint that lets approved
+      affiliate partners submit home-loan leads to SoFi via POST /afpq/api/v1/affiliate/lead/home-loan.
+      The documented Create Lead operation is a subset of a broader affiliate endpoint set for sending
+      leads and retrieving product offerings by criteria; a successful submission (HTTP 201) returns a
+      sofiAffiliateLeadId and a CREATED status that partners are advised to persist. Environment-specific
+      accountId values authenticate requests (QA base https://dev-external-0.sofitest.com, production base
+      https://www.sofi.com). Endpoint, method, base URLs, and response codes were harvested faithfully
+      from SoFi's public Postman workspace (team-sofi / sofi-api); the source material is marked
+      confidential and proprietary to Social Finance, Inc.
 
-  - aid: sofi:sofi-invest-api
-    name: SoFi Invest API
+  - aid: sofi:sofi-business-banking-api
+    name: SoFi Business Banking API
     tags:
-      - Investing
-      - Stocks
-      - ETFs
-      - Crypto
-      - Retirement
-      - Personal Finance
-    humanURL: https://www.sofi.com/invest/
+      - Business Banking
+      - Commercial Payments
+      - Real-Time Payments
+      - Embedded Finance
+      - Sponsor Banking
+      - United States
+    humanURL: https://docs.sofi.com/business-banking/docs
     properties:
-      - url: https://www.sofi.com/invest/
+      - url: https://docs.sofi.com/business-banking/docs
+        type: DeveloperPortal
+      - url: https://www.sofi.com/business-banking/commercial/
         type: Documentation
-      - url: https://www.sofi.com/wealth/assets/documents/sofi-invest-fee-schedule.pdf
-        type: Documentation
-      - url: https://www.sofi.com/invest/ira/
+      - url: https://investors.sofi.com/news/news-details/2026/SoFi-Launches-Big-Business-Banking-to-Power-Fiat-and-Crypto-Banking-on-a-Single-Regulated-Platform/default.aspx
         type: Documentation
     description: >-
-      SoFi Invest provides active and automated investing in stocks, ETFs, fractional shares, IPOs,
-      and cryptocurrency. SoFi Plus members receive a 1% match on eligible Active Invest deposits,
-      1% match on eligible crypto purchases (up to $250,000 lifetime), and IPO allocation priority.
-      Includes automated retirement accounts (IRA) and robo-advisor functionality.
+      SoFi Business Banking (marketed as Big Business Banking) is SoFi Bank, N.A.'s API-driven commercial
+      platform combining a nationally chartered bank with direct Federal Reserve access to move money in
+      real time, 24/7/365, in fiat, SoFiUSD, or selected digital assets. It powers commercial payment
+      services - debit, prepaid, ACH, and wire - for sponsor-banking partners, built on Galileo's
+      Cyberbank Core. SoFi publishes first-party developer documentation for this platform at
+      docs.sofi.com (which resolves to a ReadMe-hosted Business Banking docs project); the reference is
+      HTML-only with no publicly downloadable OpenAPI/Swagger spec confirmed, so it is listed humanURL-only
+      and partner onboarding is gated (bbb@sofi.org). Digital-asset capabilities are subject to legal,
+      regulatory, and operational approval per SoFi's own disclosures.
 
-  - aid: sofi:sofi-credit-card-api
-    name: SoFi Credit Card API
+  - aid: sofi:sofi-tech-solutions-platform-api
+    name: SoFi Tech Solutions Platform API
     tags:
-      - Credit Card
-      - Payments
-      - Rewards
-      - Personal Finance
-    humanURL: https://www.sofi.com/credit-card/
+      - Banking-as-a-Service
+      - Card Issuing
+      - Payment Processing
+      - Embedded Finance
+      - Core Banking
+      - United States
+    humanURL: https://docs.tech.sofi.com/pro/reference/program-api-intro
     properties:
-      - url: https://www.sofi.com/credit-card/
+      - url: https://docs.tech.sofi.com/pro/reference/program-api-intro
+        type: DeveloperPortal
+      - url: https://tech.sofi.com/platform/open-apis/
         type: Documentation
+      - url: https://sandbox.gpsrv.com/auth/login
+        type: Sandbox
     description: >-
-      SoFi Credit Card platform with cash back rewards and the new SoFi Smart Card offering 5% cash
-      back at grocery stores. SoFi Plus members receive a 10% boost on cash back rewards and 5% cash
-      back on SoFi Travel bookings via the Expedia-powered travel portal. Consumer-facing account
-      management and rewards redemption through the SoFi app.
+      SoFi Tech Solutions (formerly Galileo Financial Technologies, a SoFi company) is SoFi's B2B fintech
+      platform arm, exposing cloud-native RESTful APIs - Program API (accounts, cards), Config API,
+      Dispute API, Loan API, Payment Hub API, Risk/Auth APIs, Events webhooks, and External Transactions
+      - across Cyberbank Core, Cyberbank Digital, Card Issuing & Payment Hub, Secured Credit, and the
+      Payment Risk Platform, with 250+ documented methods and a sandbox at sandbox.gpsrv.com. It is
+      surfaced here as SoFi's first-party developer platform (docs at docs.tech.sofi.com); the deep,
+      one-per-resource API coverage is maintained separately in the api-evangelist/galileo-fs repository
+      to avoid duplication, since this is the Galileo/SoFi Tech Solutions processor surface.
 
 name: SoFi
 tags:
@@ -136,8 +128,24 @@ tags:
   - Fintech
   - Open Banking
   - Digital Banking
+  - Banking-as-a-Service
+  - Partner API
+  - Business Banking
+  - United States
 kind: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sofi.png
 access: 3rd-Party
 common:
   - type: DomainSecurity
@@ -146,8 +154,10 @@ common:
     url: https://www.sofi.com/
   - type: Documentation
     url: https://www.sofi.com/blog/
-  - type: GitHubOrganization
-    url: https://github.com/SoFiInc
+  - type: DeveloperPortal
+    url: https://docs.sofi.com/business-banking/docs
+  - type: Postman
+    url: https://www.postman.com/sofi-api/team-sofi-s-public-workspace/
   - type: LinkedIn
     url: https://www.linkedin.com/company/sofi
   - type: Blog
@@ -194,7 +204,7 @@ common:
       - https://sofi.statuspage.io
     updated: '2026-06-13'
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-07-23'
 position: Consuming
 description: >-
   SoFi (Social Finance) is a digital personal finance company and federally chartered bank offering
@@ -206,7 +216,12 @@ description: >-
   integration with SoFi accounts is facilitated through open banking aggregators Plaid and Finicity
   (Mastercard Open Banking) for consumer-permissioned data access. SoFi's subsidiary Galileo Financial
   Technologies provides the underlying fintech infrastructure and white-label banking APIs used by
-  major fintech brands globally.
+  major fintech brands globally. SoFi does not publish a first-party consumer-facing open-banking API;
+  consumer account access is aggregator-only (Plaid, Finicity, MX, Akoya). Its real first-party public
+  API surface is B2B/partner-oriented: two documented REST APIs in SoFi's public Postman workspace
+  (a Partner Offer Pre-Qualification API exposing SoFi's PL/SLR underwriting model, and a Home Loan
+  Affiliate Lead API), a Business Banking developer-docs project at docs.sofi.com, and the SoFi Tech
+  Solutions (formerly Galileo) platform at docs.tech.sofi.com.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

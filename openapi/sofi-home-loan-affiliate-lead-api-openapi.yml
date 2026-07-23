@@ -1,0 +1,90 @@
+openapi: 3.0.3
+info:
+  title: SoFi Home Loan Affiliate Lead API
+  version: '1.0'
+  description: >-
+    SoFi's Home Loan Affiliate Lead API lets approved affiliate partners submit home-loan leads to
+    SoFi over REST. The documented Create Lead endpoint is a subset of a broader set of affiliate
+    endpoints SoFi provides for sending leads and retrieving product offerings based on given
+    criteria. A successful submission (HTTP 201) returns a sofiAffiliateLeadId and a status of
+    CREATED, which partners are advised to store for future reference; failures return a message
+    node describing the reason. The correct accountId must be used per environment (QA or
+    Production). This document was harvested faithfully from SoFi's public Postman workspace
+    (team-sofi / sofi-api) and captures only the endpoint, method, base URLs, and documented
+    response codes that SoFi publishes there. The material is marked confidential/proprietary to
+    Social Finance, Inc.
+  contact:
+    name: SoFi (Social Finance, Inc.)
+    url: https://www.sofi.com/
+servers:
+  - url: https://www.sofi.com
+    description: Production
+  - url: https://dev-external-0.sofitest.com
+    description: QA / testing
+security:
+  - accountIdKey: []
+paths:
+  /afpq/api/v1/affiliate/lead/home-loan:
+    post:
+      operationId: createHomeLoanLead
+      summary: Create a home-loan affiliate lead
+      description: >-
+        Submits a home-loan lead to SoFi. The body must contain all required fields (and any
+        applicable optional fields) from SoFi's Create Lead Request Fields table. On success the
+        response contains the sofiAffiliateLeadId and a CREATED status.
+      tags:
+        - Affiliate Leads
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateLeadRequest'
+      responses:
+        '201':
+          description: Created - Everything worked as expected
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateLeadResponse'
+        '400':
+          description: Bad Request - Missing a required parameter; details in the message node
+        '404':
+          description: Not Found - The requested resource does not exist
+        '500':
+          description: Internal Server Error - An unexpected condition was encountered
+components:
+  securitySchemes:
+    accountIdKey:
+      type: apiKey
+      in: header
+      name: accountId
+      description: >-
+        Environment-specific accountId (QA or Production) issued by SoFi. Modeled here as an apiKey
+        scheme; consult SoFi's affiliate documentation for exact placement.
+  schemas:
+    CreateLeadRequest:
+      type: object
+      description: >-
+        Home-loan lead payload. Required and optional fields are enumerated in SoFi's Create Lead
+        Request Fields table (not reproduced verbatim here); accountId identifies the environment.
+      required:
+        - accountId
+      properties:
+        accountId:
+          type: string
+          description: Environment-specific account identifier issued by SoFi.
+      additionalProperties: true
+    CreateLeadResponse:
+      type: object
+      properties:
+        sofiAffiliateLeadId:
+          type: string
+          description: Identifier for the created lead; store for future reference.
+        status:
+          type: string
+          example: CREATED
+        message:
+          type: string
+          description: Populated on failure with the reason detail (may contain multiple messages).
+      additionalProperties: true

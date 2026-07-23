@@ -1,0 +1,94 @@
+reviewer: API Evangelist
+date: '2026-07-23'
+provider: SoFi (Social Finance, Inc.)
+slug: sofi
+domain: sofi.com
+tier: digital
+summary: >-
+  SoFi is a US digital personal-finance company and federally chartered bank (SoFi Bank, N.A.). Its
+  consumer products (SoFi Money, loans, mortgages, SoFi Invest, credit card) are app/web experiences,
+  NOT public APIs. SoFi's real first-party public API surface is B2B/partner-oriented and modest but
+  genuine: two documented REST APIs published in SoFi's public Postman workspace, a Business Banking
+  developer-docs project, and the SoFi Tech Solutions (formerly Galileo) processor platform.
+developer_portal:
+  first_party: true
+  notes: >-
+    No consumer developer portal at developer.sofi.com (DNS does not resolve). SoFi's public API
+    documentation lives in a Postman public workspace (team-sofi / sofi-api), a ReadMe-hosted Business
+    Banking docs project reachable at docs.sofi.com (302 -> ReadMe sofi-parent-group /business-banking),
+    and the SoFi Tech Solutions platform docs at docs.tech.sofi.com.
+  urls:
+    - https://www.postman.com/sofi-api/team-sofi-s-public-workspace/
+    - https://docs.sofi.com/business-banking/docs
+    - https://docs.tech.sofi.com/pro/reference/program-api-intro
+    - https://tech.sofi.com/platform/open-apis/
+probes:
+  - url: https://developer.sofi.com/
+    status: DNS_NXDOMAIN
+    note: No consumer developer portal subdomain.
+  - url: https://docs.sofi.com/
+    status: 302
+    note: Redirects to ReadMe (dash.readme.com/to/sofi-parent-group?redirect=/business-banking/docs).
+  - url: https://docs.sofi.com/business-banking/docs
+    status: 200
+  - url: https://api.sofi.com/
+    status: 404
+    note: Root 404; /health returns 200 (edge exists, not a documented public API).
+  - url: https://tech.sofi.com/
+    status: 200
+    note: SoFi Tech Solutions (formerly Galileo Financial Technologies).
+  - url: https://docs.tech.sofi.com/pro/reference/program-api-intro
+    status: 200
+  - url: https://github.com/SoFiInc
+    status: 404
+    note: Prior repo listed a dead GitHub org; removed from common. github.com/sofi-inc exists but is
+      an empty, unverified account, so no GitHubOrganization link is asserted.
+apis:
+  - name: SoFi Partner Offer Pre-Qualification API
+    kind: first-party REST
+    endpoint: POST /po/api/v2/loan-offer/json
+    base_url_prod: https://www.sofi.com
+    base_url_test: https://dev-external-0.sofitest.com
+    auth: API key / UUID per product type (PL or SLR) passed as accountId in JSON body; HTTPS only
+    spec: openapi/sofi-partner-offer-api-openapi.yml (harvested)
+  - name: SoFi Home Loan Affiliate Lead API
+    kind: first-party REST
+    endpoint: POST /afpq/api/v1/affiliate/lead/home-loan
+    base_url_prod: https://www.sofi.com
+    base_url_test: https://dev-external-0.sofitest.com
+    auth: environment-specific accountId (QA / Production)
+    spec: openapi/sofi-home-loan-affiliate-lead-api-openapi.yml (harvested)
+  - name: SoFi Business Banking API
+    kind: first-party (docs HTML-only)
+    auth: partner-gated onboarding (bbb@sofi.org)
+    spec: none downloadable
+  - name: SoFi Tech Solutions Platform API
+    kind: first-party platform (Galileo lineage)
+    note: Deep one-per-resource coverage maintained in api-evangelist/galileo-fs; sandbox at sandbox.gpsrv.com
+    spec: none harvested here (see galileo-fs)
+auth_models:
+  - API key / UUID (accountId) for partner-offer and affiliate-lead APIs
+  - Partner-gated onboarding for Business Banking and SoFi Tech Solutions platform
+open_finance_posture:
+  first_party_consumer_api: false
+  aggregators: [Plaid, Finicity, MX, Akoya]
+  fdx: >-
+    SoFi participates in the US voluntary open-finance ecosystem through aggregator connectivity rather
+    than a published first-party consumer data-access API. No SoFi-published FDX API specification was
+    found publicly.
+  cfpb_1033: >-
+    Consumer-permissioned data access is delivered via third-party aggregators (Plaid, Finicity/Mastercard,
+    MX, Akoya) rather than a documented SoFi first-party 1033 data-access API.
+spec_provenance:
+  - The two harvested OpenAPI documents were authored from SoFi's public Postman workspace collection
+    metadata (team-sofi / sofi-api), capturing only the documented endpoint, method, base URLs, auth
+    model, and HTTP response codes. Field-level schemas are intentionally minimal (additionalProperties
+    true) because SoFi's full request-field tables were not reproduced verbatim; nothing was fabricated.
+  - Postman collection source material is marked confidential/proprietary to Social Finance, Inc.;
+    only the publicly published API shape is represented.
+findings:
+  - Prior apis.yml represented six consumer marketing pages (banking, loans, mortgage, invest, credit
+    card) as "APIs" - these are app/web products, not APIs. Replaced with four genuinely documented
+    first-party developer surfaces (two with harvested OpenAPI specs).
+  - Real depth is modest and B2B/partner-oriented, which is honest for a US digital bank without an
+    open-finance mandate.
