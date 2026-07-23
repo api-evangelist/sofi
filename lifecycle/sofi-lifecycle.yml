@@ -1,0 +1,27 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/sofi-partner-offer-api-openapi.yml, openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+versioning:
+  scheme: uri-path
+  detail: >-
+    Major version is carried in the request path. Partner Offer Pre-Qualification API is at v2
+    (/po/api/v2/loan-offer/json); Home Loan Affiliate Lead API is at v1
+    (/afpq/api/v1/affiliate/lead/home-loan).
+  current:
+    partner-offer-api: v2
+    home-loan-affiliate-lead-api: v1
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: SoFi does not publish a formal deprecation / Sunset-header policy for these partner APIs.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://sofi.statuspage.io
+change_history:
+  - date: '2021-11-11'
+    api: partner-offer-api
+    change: >-
+      Added specialty Student Loan Refinancing handling for Medical (MD/DO) and Dental graduate
+      programs via a graduateProgram code on the loan-offer request.
+deprecated_operations: []

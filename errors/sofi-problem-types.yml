@@ -1,0 +1,38 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/sofi-partner-offer-api-openapi.yml, openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+format: legacy-json
+note: >-
+  SoFi's partner APIs do not publish an RFC 9457 problem+json envelope. Failures return a
+  standard HTTP status; the Home Loan Affiliate Lead API describes the failure reason in a
+  "message" node in the JSON body. This catalog is derived from the documented 4xx/5xx
+  responses in the two harvested OpenAPI definitions.
+envelope:
+  field: message
+  description: >-
+    On failure the response body may carry a message node describing the reason (the Home Loan
+    Affiliate Lead API may return multiple messages). The Partner Offer API documents status
+    codes without an explicit error body schema.
+problems:
+  - status: 400
+    title: Bad Request
+    detail: The request failed, likely due to a missing required parameter.
+    source_operations:
+      - openapi/sofi-partner-offer-api-openapi.yml#getLoanOffer
+      - openapi/sofi-home-loan-affiliate-lead-api-openapi.yml#createHomeLoanLead
+  - status: 401
+    title: Unauthorized
+    detail: The API key / UUID (accountId) provided was not valid.
+    source_operations:
+      - openapi/sofi-partner-offer-api-openapi.yml#getLoanOffer
+  - status: 404
+    title: Not Found
+    detail: The requested resource does not exist.
+    source_operations:
+      - openapi/sofi-partner-offer-api-openapi.yml#getLoanOffer
+      - openapi/sofi-home-loan-affiliate-lead-api-openapi.yml#createHomeLoanLead
+  - status: 500
+    title: Internal Server Error
+    detail: An unexpected condition was encountered; retry or contact SoFi if it persists.
+    source_operations:
+      - openapi/sofi-home-loan-affiliate-lead-api-openapi.yml#createHomeLoanLead

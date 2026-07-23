@@ -1,0 +1,23 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+source: openapi/sofi-partner-offer-api-openapi.yml, openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+note: >-
+  SoFi does not publish an official hosted MCP server for its partner APIs. This is a candidate
+  tool surface derived one-to-one from the documented OpenAPI operations, so an agent framework
+  can wrap the two partner endpoints. Each tool inherits its real inputSchema from the backing
+  operation's requestBody. Auth is by SoFi-issued accountId (API key / UUID) per product type.
+server:
+  name: sofi-partner
+  transport: http
+  url: null
+tools:
+  - name: request_loan_offer
+    description: >-
+      Return real-time Personal Loan (PL) and Student Loan Refinancing (SLR) offers by running
+      user-entered criteria through SoFi's underwriting model.
+    source_operation: openapi/sofi-partner-offer-api-openapi.yml#getLoanOffer
+  - name: submit_home_loan_lead
+    description: >-
+      Submit a home-loan affiliate lead to SoFi; returns a sofiAffiliateLeadId and CREATED status.
+    source_operation: openapi/sofi-home-loan-affiliate-lead-api-openapi.yml#createHomeLoanLead

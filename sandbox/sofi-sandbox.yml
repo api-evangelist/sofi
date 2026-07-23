@@ -1,0 +1,37 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  SoFi public Postman workspace (team-sofi / sofi-api) and harvested OpenAPI servers[]; SoFi Tech
+  Solutions / Galileo sandbox login at sandbox.gpsrv.com
+note: >-
+  SoFi separates test and production for its partner APIs by base URL and by a
+  distinct environment-specific accountId (test vs live key). No test card / test bank fixtures
+  are published for the partner offer and affiliate lead endpoints; these are lead/underwriting
+  surfaces, not card acquiring. SoFi Tech Solutions (Galileo) exposes a separate developer
+  sandbox at sandbox.gpsrv.com. Never invent test values.
+environments:
+  - name: production
+    base_url: https://www.sofi.com
+    applies_to:
+      - partner-offer-api
+      - home-loan-affiliate-lead-api
+  - name: testing
+    base_url: https://dev-external-0.sofitest.com
+    description: >-
+      Development / QA base URL; requests here do not affect live data. Requires the
+      environment-specific (test) accountId issued by SoFi.
+    applies_to:
+      - partner-offer-api
+      - home-loan-affiliate-lead-api
+  - name: tech-solutions-sandbox
+    base_url: https://sandbox.gpsrv.com
+    login: https://sandbox.gpsrv.com/auth/login
+    description: >-
+      SoFi Tech Solutions (formerly Galileo) developer sandbox console; deep API coverage is
+      maintained in the api-evangelist/galileo-fs repository.
+test_credentials:
+  model: environment-specific-accountId
+  detail: >-
+    Authentication uses a SoFi-issued accountId (API key / UUID). A distinct accountId is used
+    per environment (QA/test vs production) and, for the Partner Offer API, per product type
+    (Personal Loan or Student Loan Refinancing). Values are provisioned by SoFi and not public.

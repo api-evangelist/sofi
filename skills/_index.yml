@@ -1,0 +1,11 @@
+generated: '2026-06-20'
+method: generated
+skills:
+  - file: sofi-request-loan-offer.md
+    name: Request a SoFi partner loan offer
+    api: openapi/sofi-partner-offer-api-openapi.yml
+    operations: [getLoanOffer]
+  - file: sofi-submit-home-loan-lead.md
+    name: Submit a SoFi home-loan affiliate lead
+    api: openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+    operations: [createHomeLoanLead]

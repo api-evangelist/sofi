@@ -148,6 +148,10 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sofi.png
 access: 3rd-Party
 common:
+  - type: AgenticAccess
+    url: agentic-access/sofi-agentic-access.yml
+  - type: Authentication
+    url: authentication/sofi-authentication.yml
   - type: DomainSecurity
     url: security/sofi-domain-security.yml
   - type: Website
@@ -180,6 +184,26 @@ common:
     url: https://www.sofi.com/privacy-policy
   - type: Support
     url: https://support.sofi.com/hc/en-us
+  - type: ErrorCatalog
+    url: errors/sofi-problem-types.yml
+  - type: Conventions
+    url: conventions/sofi-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/sofi-lifecycle.yml
+  - type: Conformance
+    url: conformance/sofi-conformance.yml
+  - type: MCPServer
+    url: mcp/sofi-mcp.yml
+  - type: Sandbox
+    url: sandbox/sofi-sandbox.yml
+  - type: LLMsTxt
+    url: llms/sofi-llms.txt
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Overlay
+    url: overlays/sofi-partner-offer-api-overlay.yaml
+  - type: Overlay
+    url: overlays/sofi-home-loan-affiliate-lead-api-overlay.yaml
   - type: Features
     data:
       - Digital personal finance platform covering banking, lending, investing, and insurance

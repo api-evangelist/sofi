@@ -1,0 +1,47 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/sofi-partner-offer-api-openapi.yml, openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+note: >-
+  Cross-cutting request/response semantics for SoFi's first-party partner REST APIs (Partner
+  Offer Pre-Qualification and Home Loan Affiliate Lead), derived from the two harvested OpenAPI
+  definitions and SoFi's public Postman workspace. These are single-operation partner endpoints,
+  so several conventions common to larger APIs (pagination, expansion, sparse fields) do not apply.
+authentication:
+  style: api-key
+  detail: >-
+    Authenticated with an accountId (API key / UUID) issued by SoFi. The Partner Offer API uses
+    one unique UUID per product type (Personal Loan or Student Loan Refinancing); the Home Loan
+    Affiliate Lead API uses an environment-specific accountId (QA or Production). All requests
+    must be made over HTTPS; no password is required.
+  reference: authentication/sofi-authentication.yml
+transport:
+  protocol: https-only
+  content_type: application/json
+idempotency:
+  supported: false
+  note: >-
+    SoFi does not document an idempotency-key mechanism for these endpoints. Partners submitting
+    Home Loan Affiliate leads are advised to persist the returned sofiAffiliateLeadId to avoid
+    duplicate submissions on their side.
+pagination:
+  supported: false
+  note: Both documented operations are single-request POST calls with no collection listing.
+versioning:
+  style: uri-path
+  detail: >-
+    Version is carried in the request path (Partner Offer API v2 at /po/api/v2/...; Home Loan
+    Affiliate Lead API v1 at /afpq/api/v1/...).
+  reference: lifecycle/sofi-lifecycle.yml
+error_envelope:
+  style: http-status-plus-message
+  detail: >-
+    Failures are signaled by HTTP status. The Home Loan Affiliate Lead API returns a message node
+    in the body describing the reason (potentially multiple messages). No RFC 9457 problem+json.
+  reference: errors/sofi-problem-types.yml
+rate_limiting:
+  documented: false
+  reference: rate-limits/sofi-rate-limits.yml
+environments:
+  production: https://www.sofi.com
+  testing: https://dev-external-0.sofitest.com
+  reference: sandbox/sofi-sandbox.yml

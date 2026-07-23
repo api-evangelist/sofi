@@ -1,0 +1,18 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/sofi-home-loan-affiliate-lead-api-openapi.yml, openapi/sofi-partner-offer-api-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: accountIdKey
+  type: apiKey
+  in: header
+  parameter: accountId
+  description: Environment-specific accountId (QA or Production) issued by SoFi. Modeled here
+    as an apiKey scheme; consult SoFi's affiliate documentation for exact placement.
+  sources:
+  - openapi/sofi-home-loan-affiliate-lead-api-openapi.yml
+  - openapi/sofi-partner-offer-api-openapi.yml

@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for SoFi Partner Offer Pre-Qualification API
+  version: 1.0.0
+extends: openapi/sofi-partner-offer-api-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: sofi
+      x-apievangelist-surface: partner-offer-api
+      x-apievangelist-auth: api-key (accountId / UUID, one per product type)
+      x-apievangelist-conventions: conventions/sofi-conventions.yml
+      x-apievangelist-errors: errors/sofi-problem-types.yml
+  - target: $.paths['/po/api/v2/loan-offer/json'].post
+    update:
+      x-apievangelist-tool: request_loan_offer
+      x-apievangelist-agentic-access: agentic-access/sofi-agentic-access.yml#getLoanOffer

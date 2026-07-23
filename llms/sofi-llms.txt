@@ -1,0 +1,120 @@
+# SoFi Tech Solutions
+
+> SoFi Technology Solutions, LLC and certain of its affiliates collectively comprise a financial technology company owned and operated independently by SoFi Technologies, Inc. (NASDAQ: SOFI) that enables fintechs, financial institutions, and emerging and established brands to build differentiated financial solutions that deliver exceptional, customer-centric experiences. Through modern, open APIs, SoFi Tech Solutions flexible, secure, scalable and fully integrated platform drives innovation across payments and financial services. Trusted by digital banking heavyweights, early-stage innovators and enterprise clients alike, SoFi Tech Solutions supports issuing physical and virtual payment cards, mobile push provisioning, tailored and differentiated financial products and more, across industries and geographies.
+
+## Docs
+- [Home](https://tech.sofi.com/): Main English homepage introducing SoFi Tech Solutions and its platform.
+- [Home - Español](https://tech.sofi.com/es/): Spanish homepage for SoFi Tech Solutions.
+- [Home - Português](https://tech.sofi.com/pt/): Portuguese homepage for SoFi Tech Solutions.
+- [Open APIs](https://tech.sofi.com/platform/open-apis/): Overview of the company’s API-first financial technology platform.
+- [Banking Core](https://tech.sofi.com/platform/banking-core/): Core banking platform capabilities and modern banking infrastructure.
+- [Who We Serve](https://tech.sofi.com/platform/who-we-serve/): Solutions tailored for fintechs, banks, and enterprise brands.
+- [Cloud Infrastructure](https://tech.sofi.com/platform/cloud-infrastructure/): Cloud-based infrastructure supporting scalable financial products.
+- [Trusted Clients](https://tech.sofi.com/platform/trusted-clients/): Client stories and proof points from trusted financial partners.
+- [Trusted Partners](https://tech.sofi.com/platform/trusted-partners/): Partner ecosystem and collaboration highlights.
+- [Card Issuing](https://tech.sofi.com/products/card-issuing/): Card issuing products for physical and virtual payment cards.
+- [Credit and Lending](https://tech.sofi.com/products/credit-and-lending/): Credit and lending product suite for financial institutions.
+- [Deposits and Banking](https://tech.sofi.com/products/deposits-and-banking/): Deposit and banking solutions for modern financial experiences.
+- [Data and Analytics](https://tech.sofi.com/products/data-and-analytics/): Data and analytics tools for reporting, insights, and decisioning.
+- [Risk and Compliance](https://tech.sofi.com/products/risk-and-compliance/): Risk management and compliance capabilities for financial products.
+- [Payment Processing and Money Transfers](https://tech.sofi.com/products/payment-processing-and-money-transfers/): Payment processing and transfer capabilities for financial services.
+- [Payments and Cards - Card Issuing](https://tech.sofi.com/payments-and-cards/card-issuing/): Card issuance solutions within payments and cards offerings.
+- [Payments and Cards - Payment Hub](https://tech.sofi.com/payments-and-cards/payment-hub/): Centralized payments hub for processing and orchestration.
+- [Payments and Cards - Parent Teen](https://tech.sofi.com/payments-and-cards/parent-teen/): Parent-teen financial product use case and experience.
+- [Payments and Cards - Use Case: Parent Teen](https://tech.sofi.com/payments-and-cards/use-case/parent-teen/): Parent-teen payment use case and product details.
+- [Payments and Cards - Use Case: Disbursements and Payouts](https://tech.sofi.com/payments-and-cards/use-case/disbursements-and-payouts/): Disbursement and payout workflow use case.
+- [Payments Solutions - B2B Payments](https://tech.sofi.com/payments-solutions/b2b-payments/): B2B payment solutions for businesses and platforms.
+- [Payments Solutions - Cryptocurrency](https://tech.sofi.com/payments-solutions/cryptocurrency/): Cryptocurrency payment-related solutions and support.
+- [Payments Solutions - Embedded Finance](https://tech.sofi.com/payments-solutions/embedded-finance/): Embedded finance capabilities for brands and platforms.
+- [Payments Solutions - Growth and Activation](https://tech.sofi.com/payments-solutions/growth-and-activation/): Tools to drive card and payment program adoption.
+- [Payments Solutions - Digital Banking Platform](https://tech.sofi.com/payments-solutions/digital-banking-platform/): Digital banking platform overview for modern financial apps.
+- [Payments Solutions - Investing and Cash Management](https://tech.sofi.com/payments-solutions/investing-and-cash-management/): Investing and cash management platform solutions.
+- [Lending - Secured Card](https://tech.sofi.com/lending/secured-card/): Secured card product information and lending use cases.
+- [Lending - Secured Credit](https://tech.sofi.com/lending/secured-credit/): Secured credit solutions and product details.
+- [Lending - Corporate Credit](https://tech.sofi.com/lending/corporate-credit/): Corporate credit offerings for business expense programs.
+- [Lending - Buy Now Pay Later](https://tech.sofi.com/lending/buy-now-pay-later/): BNPL lending product and implementation details.
+- [Lending - BNPL Pre Purchase](https://tech.sofi.com/lending/bnpl-pre-purchase/): Pre-purchase buy now pay later use case.
+- [Lending - BNPL Post Purchase](https://tech.sofi.com/lending/bnpl-post-purchase/): Post-purchase BNPL experience and payment options.
+- [Lending - Cyberbank Core](https://tech.sofi.com/lending/cyberbank-core/): Cyberbank Core lending-related banking infrastructure.
+- [Deposits - Cyberbank Core](https://tech.sofi.com/deposits/cyberbank-core/): Deposit banking capabilities powered by Cyberbank Core.
+- [Deposits - Core Modernization](https://tech.sofi.com/deposits/use-case/core-modernization/): Core modernization use case for deposit banking.
+- [Services - Evolution Lab](https://tech.sofi.com/services/evolution-lab/): Innovation lab for co-developing financial technology solutions.
+- [Services - Co-Brand Debit](https://tech.sofi.com/services/co-brand-debit/): Co-branded debit program services and management.
+- [Services - Fraud Operations](https://tech.sofi.com/services/fraud-operations/): Fraud operations support and program services.
+- [Services - Dispute Operations](https://tech.sofi.com/services/dispute-operations/): Dispute processing and resolution support services.
+- [Services - Program Management](https://tech.sofi.com/services/program-management/): Program management services for financial product launches.
+- [Services - Customer Service and IVR](https://tech.sofi.com/services/customer-service-and-ivr/): Customer service and IVR support for financial products.
+- [Services - Co-Brand Debit](https://tech.sofi.com/services/co-brand-debit/): Co-branded debit services for card programs.
+- [Risk - Instant Verification](https://tech.sofi.com/risk/instant-verification/): Instant verification tools for safer onboarding and identity checks.
+- [Risk - Payment Risk Platform](https://tech.sofi.com/risk/payment-risk-platform/): Payment risk platform for fraud prevention and monitoring.
+- [Channels - Cyberbank Digital](https://tech.sofi.com/channels/cyberbank-digital/): Digital banking channel built on Cyberbank technology.
+- [Channels - Cyberbank Konecta](https://tech.sofi.com/channels/cyberbank-konecta/): Conversational AI banking assistant channel and demo.
+- [Channels - Use Case: Digital Banking](https://tech.sofi.com/channels/use-case/digital-banking/): Digital banking use case and implementation example.
+- [Channels - Use Case: Conversational AI](https://tech.sofi.com/channels/use-case/conversational-ai/): Conversational AI use case for customer engagement.
+- [Blog](https://tech.sofi.com/blog/): English blog with fintech insights, product stories, and research.
+- [News](https://tech.sofi.com/news/): English newsroom with announcements, partnerships, and company updates.
+- [Podcast](https://tech.sofi.com/podcast/): Podcast episodes featuring product, strategy, and banking modernization topics.
+- [Events](https://tech.sofi.com/events/): Events, conferences, and webinar listings for the brand.
+- [About](https://tech.sofi.com/about/): Company background, mission, and platform overview.
+- [Careers](https://tech.sofi.com/careers/): Career opportunities and hiring information.
+- [Clients](https://tech.sofi.com/clients/): Client showcase and industry use cases.
+- [Contact Us](https://tech.sofi.com/contact-us/): Contact page for sales, partnerships, and inquiries.
+- [SMS Policy](https://tech.sofi.com/sms-policy/): SMS messaging policy and communication terms.
+- [Privacy Disclosure](https://tech.sofi.com/privacy-disclosure/): Privacy disclosure and data handling information.
+- [ADA Accessibility](https://tech.sofi.com/american-with-disabilities-act-accessibility/): Accessibility statement and ADA compliance information.
+- [Newsletter Signup](https://tech.sofi.com/lp/newsletter-signup/): Newsletter signup landing page for updates and insights.
+- [Request Access](https://tech.sofi.com/lp/request-access/): Request access to gated content or demos.
+- [Contact Us Landing Page](https://tech.sofi.com/lp/contact-us/): Landing page for contact and lead capture.
+- [Test Page](https://tech.sofi.com/lp/test-page/): Test landing page used for validation or QA.
+- [M2020 2024](https://tech.sofi.com/lp/m2020-2024/): Event or campaign landing page related to Money20/20 2024.
+- [M2020 2025](https://tech.sofi.com/lp/m2020-2025/): Event or campaign landing page related to Money20/20 2025.
+- [Febraban 2024](https://tech.sofi.com/lp/febraban-2024/): Campaign page for Febraban 2024.
+- [Febraban Tech 2025](https://tech.sofi.com/lp/febraban-tech-2025/): Campaign page for Febraban Tech 2025.
+- [Felaban CLAB 2025](https://tech.sofi.com/lp/Felaban-CLAB-2025/): Campaign page for FELABAN CLAB 2025.
+- [NYC Xchange 2025](https://tech.sofi.com/lp/nyc-xchange-2025/): Event landing page for NYC Xchange 2025.
+- [CDMX Xchange CEO 2025](https://tech.sofi.com/lp/cdmx-xchange-ceo-2025/): CEO-focused event page for CDMX Xchange 2025.
+- [CDMX Xchange Tech 2025](https://tech.sofi.com/lp/cdmx-xchange-tech-2025/): Technology-focused event page for CDMX Xchange 2025.
+- [BA Xchange June 2025](https://tech.sofi.com/lp/ba-xchange-june-2025/): Buenos Aires Xchange event page for June 2025.
+- [Felaban Xchange 2025](https://tech.sofi.com/lp/felaban-xchange-2025/): FELABAN Xchange event page for 2025.
+- [La Boca Xchange 2025](https://tech.sofi.com/lp/la-boca-xchange-2025/): La Boca Xchange event landing page.
+- [Mexico City Xchange June 2026](https://tech.sofi.com/lp/mexicocity-xchange-June2026/): Mexico City Xchange event page for June 2026.
+- [Asobancaria Xchange 2026](https://tech.sofi.com/lp/asobancaria-xchange-2026/): Asobancaria Xchange event landing page for 2026.
+- [Fintech Meetup 2024](https://tech.sofi.com/lp/fintech-meetup-2024/): Fintech Meetup 2024 campaign or event page.
+- [Fintech Americas The Pitch](https://tech.sofi.com/lp/fintech-americas-the-pitch/): Fintech Americas Pitch campaign page.
+- [B2B Spend Management](https://tech.sofi.com/lp/b2b-spend-management/): B2B spend management solution landing page.
+- [Better Approach B2B Expenses](https://tech.sofi.com/lp/better-approach-b2b-expenses/): Messaging around improving B2B expense management.
+- [Better Approach B2B Expenses - Ungated](https://tech.sofi.com/lp/better-approach-b2b-expenses-ug/): Ungated version of the B2B expenses landing page.
+- [Card Issuing Platform](https://tech.sofi.com/lp/card-issuing-platform/): Card issuing platform overview and capabilities.
+- [Debit Loyalty Platform](https://tech.sofi.com/lp/debit-loyalty-platform/): Debit loyalty platform landing page.
+- [Debit Loyalty Platform - Ungated](https://tech.sofi.com/lp/debit-loyalty-platform-ug/): Ungated debit loyalty platform content.
+- [Brochure Cyberbank Core](https://tech.sofi.com/lp/brochure-cyberbank-core/): Cyberbank Core brochure and product overview.
+- [Demo Cyberbank Digital Banking](https://tech.sofi.com/lp/demo-cyberbank-digital-banking/): Demo request page for Cyberbank Digital Banking.
+- [Demo Cyberbank Konecta Conversational AI](https://tech.sofi.com/lp/demo-cyberbank-konecta-conversational-ai/): Demo page for Cyberbank Konecta conversational AI.
+- [Demo Cyberbank Digital](https://tech.sofi.com/es/lp/demo-de-cyberbank-digital/): Spanish demo page for Cyberbank Digital.
+- [Request Access - Español](https://tech.sofi.com/es/lp/solicitar-acceso/): Spanish request access landing page.
+- [Contact Us - Español](https://tech.sofi.com/es/lp/contactanos/): Spanish contact landing page.
+- [Contact Us - Português](https://tech.sofi.com/pt/lp/contactar-nos/): Portuguese contact landing page.
+- [Newsletter Signup - Português](https://tech.sofi.com/pt/lp/inscreva-se-na-newsletter/): Portuguese newsletter signup page.
+- [Request Access - Português](https://tech.sofi.com/pt/lp/request-access/): Portuguese request access landing page.
+- [Test Page - Español](https://tech.sofi.com/es/lp/test-page/): Spanish test landing page.
+- [Test Page - Português](https://tech.sofi.com/pt/lp/test-page/): Portuguese test landing page.
+- [Blog or News Template](https://tech.sofi.com/BlogOrNewsTemplate/): Template page for blog or news article layouts.
+- [Landing Page Template](https://tech.sofi.com/LandingPageTemplate/): Template page for landing page layouts.
+- [Event Page Template](https://tech.sofi.com/EventPageTemplate/): Template page for event page layouts.
+- [Blog or News Template - Español](https://tech.sofi.com/es/BlogOrNewsTemplate/): Spanish template for blog or news layouts.
+- [Blog or News Template - Português](https://tech.sofi.com/pt/BlogOrNewsTemplate/): Portuguese template for blog or news layouts.
+- [Landing Page Template - Español](https://tech.sofi.com/es/LandingPageTemplate/): Spanish landing page template.
+- [Landing Page Template - Português](https://tech.sofi.com/pt/LandingPageTemplate/): Portuguese landing page template.
+- [Event Page Template - Español](https://tech.sofi.com/es/EventPageTemplate/): Spanish event page template.
+- [Event Page Template - Português](https://tech.sofi.com/pt/EventPageTemplate/): Portuguese event page template.
+- [Privacy Disclosure - Spanish](https://tech.sofi.com/privacy-disclosure-spanish/): Spanish privacy disclosure page.
+- [Privacy Disclosure - Español](https://tech.sofi.com/es/privacy-disclosure/): Spanish privacy disclosure information.
+- [Privacy Disclosure - Português](https://tech.sofi.com/pt/privacy-disclosure/): Portuguese privacy disclosure information.
+- [Privacy Disclosure - Spanish - Español](https://tech.sofi.com/es/privacy-disclosure-spanish/): Spanish-language privacy disclosure variant.
+- [Privacy Disclosure - Spanish - Português](https://tech.sofi.com/pt/privacy-disclosure-spanish/): Portuguese-language Spanish privacy disclosure variant.
+- [ADA Accessibility - Español](https://tech.sofi.com/es/american-with-disabilities-act-accessibility/): Spanish accessibility statement and ADA information.
+- [ADA Accessibility - Español Variant](https://tech.sofi.com/es/american-with-disabilities-act-accessibility-spanish/): Spanish accessibility statement variant.
+- [ADA Accessibility - Português](https://tech.sofi.com/pt/american-with-disabilities-act-accessibility/): Portuguese accessibility statement and ADA information.
+- [ADA Accessibility - Português Variant](https://tech.sofi.com/pt/american-with-disabilities-act-accessibility-spanish/): Portuguese accessibility statement variant.
+- [404 - Español](https://tech.sofi.com/es/404/): Spanish 404 error page.
+- [404 - Português](https://tech.sofi.com/pt/404/): Portuguese 404 error page.
