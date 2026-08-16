@@ -2,7 +2,7 @@
   "aid": "sofi",
   "url": "https://www.sofi.com/blog/",
   "rss": "https://www.sofi.com/blog/feed/",
-  "fetched": "2026-08-06T14:08:46Z",
+  "fetched": "2026-08-15T12:11:08Z",
   "posts": [
     {
       "title": "Where can I find SoFi Bank Deposit Account Agreement?",
@@ -94,7 +94,8 @@
       "feed_url": "https://www.linkedin.com/company/sofi",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     }
   ],
   "post_count": 20
