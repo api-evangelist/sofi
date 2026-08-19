@@ -1,0 +1,309 @@
+{
+  "item": [
+    {
+      "id": "52aeb52d-d380-4137-9ab1-9ef60e1c03b7",
+      "name": "Partner Offers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "751e0648-5a88-4b79-af78-f9cf3c4b4988",
+          "name": "Return real-time loan offers",
+          "request": {
+            "name": "Return real-time loan offers",
+            "description": {
+              "content": "Returns real-time Personal Loan (PL) and Student Loan Refinancing (SLR) offers by running user-entered criteria through SoFi's underwriting model. The partner's API key / UUID is passed as the accountId field in the request body.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "po",
+                "api",
+                "v2",
+                "loan-offer",
+                "json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountId\": \"<uuid>\",\n  \"loanPurpose\": \"<integer>\",\n  \"graduateProgram\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "518bcca6-03a8-465a-bf87-12e35c7c06da",
+              "name": "Okay - Everything worked as expected; loan offers returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "po",
+                    "api",
+                    "v2",
+                    "loan-offer",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<uuid>\",\n  \"loanPurpose\": \"<integer>\",\n  \"graduateProgram\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 8121.531182845758,\n  \"key_1\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2a2715c6-aa31-4226-a709-d4291678b419",
+              "name": "Bad Request - The request failed, likely due to a missing required parameter",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "po",
+                    "api",
+                    "v2",
+                    "loan-offer",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<uuid>\",\n  \"loanPurpose\": \"<integer>\",\n  \"graduateProgram\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4be91c46-9993-41bf-b56a-f0d6591e1cad",
+              "name": "Unauthorized - The API key / UUID provided was not valid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "po",
+                    "api",
+                    "v2",
+                    "loan-offer",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<uuid>\",\n  \"loanPurpose\": \"<integer>\",\n  \"graduateProgram\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9ba69378-84b3-415b-87e9-934e5a1e9df1",
+              "name": "Not Found - The requested resource does not exist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "po",
+                    "api",
+                    "v2",
+                    "loan-offer",
+                    "json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<uuid>\",\n  \"loanPurpose\": \"<integer>\",\n  \"graduateProgram\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.sofi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "accountId"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ca13346e-3acc-4d26-8474-9029ba0ae0e1",
+    "name": "SoFi Partner Offer Pre-Qualification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SoFi's partner-offer-api (Partner Offer Pre Qual V2) is an external REST API that exposes SoFi's underwriting model to approved partners, returning real-time Personal Loan (PL) and Student Loan Refinancing (SLR) offers based on user-entered criteria. User-entered criteria can also be saved to pre-populate data on a SoFi loan application when an offer is selected on a partner site. Later releases added specialty SLR handling for Medical and Dental graduate programs. Authentication is by API key / UUID (one per product type, PL or SLR) supplied as the accountId parameter in the JSON request body; a password is not required and all requests must be made over HTTPS. This document was harvested faithfully from SoFi's public Postman workspace (team-sofi / sofi-api) and captures only the endpoint, method, base URLs, auth model, and documented response codes that SoFi publishes there.\n\nContact Support:\n Name: SoFi (Social Finance, Inc.)",
+      "type": "text/plain"
+    }
+  }
+}

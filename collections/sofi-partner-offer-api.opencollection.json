@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SoFi Partner Offer Pre-Qualification API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "accountId",
+      "value": "{{accountId}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Partner Offers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Return real-time loan offers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.sofi.com/po/api/v2/loan-offer/json",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns real-time Personal Loan (PL) and Student Loan Refinancing (SLR) offers by running user-entered criteria through SoFi's underwriting model. The partner's API key / UUID is passed as the accountId field in the request body."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

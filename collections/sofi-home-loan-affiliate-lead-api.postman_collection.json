@@ -1,0 +1,314 @@
+{
+  "item": [
+    {
+      "id": "968a482d-6b97-4538-a8da-2e0f5c0c22d7",
+      "name": "Affiliate Leads",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4b7a5c3-b41a-4658-8825-1832a228b139",
+          "name": "Create a home-loan affiliate lead",
+          "request": {
+            "name": "Create a home-loan affiliate lead",
+            "description": {
+              "content": "Submits a home-loan lead to SoFi. The body must contain all required fields (and any applicable optional fields) from SoFi's Create Lead Request Fields table. On success the response contains the sofiAffiliateLeadId and a CREATED status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "afpq",
+                "api",
+                "v1",
+                "affiliate",
+                "lead",
+                "home-loan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9aa6bd72-aa3e-4bfe-8257-0abcc41b673d",
+              "name": "Created - Everything worked as expected",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "afpq",
+                    "api",
+                    "v1",
+                    "affiliate",
+                    "lead",
+                    "home-loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"sofiAffiliateLeadId\": \"string\",\n  \"status\": \"CREATED\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1f1e9e7-dd5d-46a7-8983-0ed4f92bf99c",
+              "name": "Bad Request - Missing a required parameter; details in the message node",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "afpq",
+                    "api",
+                    "v1",
+                    "affiliate",
+                    "lead",
+                    "home-loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4e6018e9-717c-4900-9f23-9e286d5e9e09",
+              "name": "Not Found - The requested resource does not exist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "afpq",
+                    "api",
+                    "v1",
+                    "affiliate",
+                    "lead",
+                    "home-loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bead6d57-ed93-4848-a4db-832a019cfc79",
+              "name": "Internal Server Error - An unexpected condition was encountered",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "afpq",
+                    "api",
+                    "v1",
+                    "affiliate",
+                    "lead",
+                    "home-loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "accountId",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.sofi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "accountId"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dc80c52b-06b1-49ba-80db-5459c84362a4",
+    "name": "SoFi Home Loan Affiliate Lead API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SoFi's Home Loan Affiliate Lead API lets approved affiliate partners submit home-loan leads to SoFi over REST. The documented Create Lead endpoint is a subset of a broader set of affiliate endpoints SoFi provides for sending leads and retrieving product offerings based on given criteria. A successful submission (HTTP 201) returns a sofiAffiliateLeadId and a status of CREATED, which partners are advised to store for future reference; failures return a message node describing the reason. The correct accountId must be used per environment (QA or Production). This document was harvested faithfully from SoFi's public Postman workspace (team-sofi / sofi-api) and captures only the endpoint, method, base URLs, and documented response codes that SoFi publishes there. The material is marked confidential/proprietary to Social Finance, Inc.\n\nContact Support:\n Name: SoFi (Social Finance, Inc.)",
+      "type": "text/plain"
+    }
+  }
+}

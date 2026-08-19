@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SoFi Home Loan Affiliate Lead API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "accountId",
+      "value": "{{accountId}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Affiliate Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a home-loan affiliate lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.sofi.com/afpq/api/v1/affiliate/lead/home-loan",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits a home-loan lead to SoFi. The body must contain all required fields (and any applicable optional fields) from SoFi's Create Lead Request Fields table. On success the response contains the sofiAffiliateLeadId and a CREATED status."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
