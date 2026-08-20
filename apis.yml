@@ -37,6 +37,13 @@ apis:
     tags:
       - Mortgage
       - Home Loans
+      - Affiliates
+      - Lead Generation
+      - Partner API
+      - United States
+    tags_raw:
+      - Mortgage
+      - Home Loans
       - Affiliate
       - Lead Generation
       - Partner API
@@ -92,6 +99,13 @@ apis:
   - aid: sofi:sofi-tech-solutions-platform-api
     name: SoFi Tech Solutions Platform API
     tags:
+      - Banking as a Service
+      - Card Issuing
+      - Payment Processing
+      - Embedded Finance
+      - Core Banking
+      - United States
+    tags_raw:
       - Banking-as-a-Service
       - Card Issuing
       - Payment Processing
@@ -118,6 +132,21 @@ apis:
 
 name: SoFi
 tags:
+  - Personal Finance
+  - Banking
+  - Lending
+  - Student Loans
+  - Mortgages
+  - Investing
+  - Credit Cards
+  - Fintech
+  - Open Banking
+  - Digital Banking
+  - Banking as a Service
+  - Partner API
+  - Business Banking
+  - United States
+tags_raw:
   - Personal Finance
   - Banking
   - Lending
