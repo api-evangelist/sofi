@@ -167,6 +167,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sofi.png
 access: 3rd-Party
 common:
+  - type: CapabilityMap
+    url: capabilities/sofi-capability-edges.yml
+    name: SoFi Business Capability Map
   - type: AgenticAccess
     url: agentic-access/sofi-agentic-access.yml
   - type: Authentication

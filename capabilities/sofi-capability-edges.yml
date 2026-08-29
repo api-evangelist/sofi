@@ -1,0 +1,38 @@
+slug: sofi
+provider: SoFi
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Affiliate Leads
+  spec_file: sofi-affiliate-leads-api-openapi.yml
+  capability_id: BC-1320.10
+  capability_id_l1: BC-1320
+  capability_name: Credit Origination Management
+  confidence: 0.78
+  evidence: POST /afpq/api/v1/affiliate/lead/home-loan — 'Create a home-loan affiliate lead'; 'lets approved
+    affiliate partners submit home-loan leads to SoFi'
+  reason: The single operation ingests home-loan lead applications from partner channels into SoFi's lending
+    funnel, which is credit application intake / origination workflow rather than generic CRM lead capture,
+    given the mortgage product context.
+- tag: Partner Offers
+  spec_file: sofi-partner-offers-api-openapi.yml
+  capability_id: BC-1320.20
+  capability_id_l1: BC-1320
+  capability_name: Credit Underwriting & Decisioning Management
+  confidence: 0.78
+  evidence: '''exposes SoFi''s underwriting model to approved partners, returning real-time Personal Loan
+    (PL) and Student Loan Refinancing (SLR) offers based on user-entered criteria''; POST /po/api/v2/loan-offer/json
+    getLoanOffer'
+  reason: The API runs pre-qualification against the lender's underwriting model to return priced loan
+    offers — credit underwriting and decisioning. Some overlap with origination pre-screening keeps confidence
+    below 0.9.
